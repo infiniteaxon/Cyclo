@@ -1,5 +1,5 @@
 
-| **Relevant Operators:** |
+| **Relevant Operators:** ||
 |---|---|
 | -F | Fast Mode: Scans 100 common ports instead of 1000 |
 | -r | Consecutive: Scans ports in consecutive order instead of random |
