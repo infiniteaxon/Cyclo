@@ -1,0 +1,5 @@
+**Example:**
+
+```
+nikto -h {IP}
+```

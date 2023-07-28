@@ -1,0 +1,5 @@
+Example:
+
+```
+whois axonia.co
+```
