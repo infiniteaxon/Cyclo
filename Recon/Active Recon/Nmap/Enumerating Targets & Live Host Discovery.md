@@ -8,7 +8,7 @@ nmap -iL [path to file]
 
 2. **Live Host Discovery:**
 
-|**Relevant Operators:**| 
+|**Relevant Operators:**||
 |---|---|
 |-n | no DNS lookup |
 | -R | reverse-DNS lookup for all hosts |
