@@ -1,4 +1,4 @@
-Armitage is essentially just a GUI for Metasploit. After installation, and confirmation the Metasploit is also installed, you're ready to start using Armitage. There are two sides of this program you should be aware of:
+Armitage is essentially just a GUI for Metasploit. After installation, and confirmation that Metasploit is also installed, you're ready to start using Armitage. There are two sides of this program you should be aware of:
 
 1: Teamserver
     Takes an IP address and Password
