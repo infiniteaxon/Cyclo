@@ -1,0 +1,25 @@
+# Check iptables rules
+sudo iptables -L
+
+# Create a basic ruleset
+sudo iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+
+-A # places rule at end of specified chain {INPUT}
+-m # calls in an iptables module {conntrack}
+--ctstate # looks for {ESTABLISHED} connection from user then allows {RELATED} packets to come back into the network to user
+-j # {ACCEPT} user requested server
+
+# Allow SSH Connections
+sudo iptables -A input -p tcp --dport ssh -j ACCEPT
+
+-p # specify packets from {TCP} protocol
+--dport # destination port {ssh}
+
+# Drop Everything Else (put at end of chain. or risk dropping unintended packets)
+sudo iptables -A INPUT -j DROP
+
+# Insert loopback rule at start of chain
+sudo iptables -I INPUT 1 -i lo -j ACCEPT 
+
+# iptables persistence
+sudo apt install iptables-persistent
