@@ -12,10 +12,14 @@
 #### Create a basic ruleset
 `sudo iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT`
 
--A # places rule at end of specified chain {INPUT}
--m # calls in an iptables module {conntrack}
---ctstate # looks for {ESTABLISHED} connection from user then allows {RELATED} packets to come back into the network to user
--j # {ACCEPT} user requested server
+
+| Operator | Arg |
+|---|---|
+|`-A`|places rule at end of specified chain {INPUT}|
+|`-m`|calls in an iptables module {conntrack}|
+|`--ctstat`|looks for {ESTABLISHED} connection from user then allows {RELATED} packets to come back into the network to user|
+|`-j`|{ACCEPT} user requested server|
+
 
 #### Allow SSH Connections
 `sudo iptables -A input -p tcp --dport ssh -j ACCEPT`
