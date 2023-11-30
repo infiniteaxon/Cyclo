@@ -4,7 +4,7 @@
 
 #### Use PKI for SSH
 - Generate ssh key
-	- `ssh-keygen -t rsa`\
+	- `ssh-keygen -t rsa`
 - Copy pub key to server
 	- `ssh-copy-id username@server`
 - Check `sshd_config` for if PKI enabled
